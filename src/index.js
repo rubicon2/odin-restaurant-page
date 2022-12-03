@@ -2,17 +2,18 @@ import "./style.css";
 import pizzaBurger from "./img/pizza-burger.jpeg";
 import toilet from "./img/toilet.jpg";
 
-import { createHeader, createMain } from "./createIndex";
+import { createHeader } from "./modules/header";
+import { createNews } from "./modules/news";
 
 const content = document.querySelector("#content");
 
 content.appendChild(createHeader("TOILET PIZZA PLAZA", [
+    { href: "#", innerText: "News" },
     { href: "#", innerText: "Menu" },
-    { href: "#", innerText: "Order" },
     { href: "#", innerText: "Book" }
 ]));
 
-content.appendChild(createMain([
+content.appendChild(createNews([
     {
         title: "The only place you can grab a slice while shopping for a new toilet!",
         paragraphs: [

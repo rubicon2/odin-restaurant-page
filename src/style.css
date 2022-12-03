@@ -43,6 +43,9 @@
 :root {
     box-sizing: border-box;
     font-family: Roboto;
+
+    --grey: rgb(78, 78, 78);
+    --black: rgb(32, 32, 32);
 }
 
 *, *::before, *::after {
@@ -68,7 +71,7 @@ body {
     width: 100vw;
     min-height: 100vh;
 
-    background-color: rgb(32, 32, 32);
+    background-color: var(--black);
     color: white;
 }
 
@@ -106,26 +109,35 @@ p {
 }
 
 .header-bar {
-    background-color: rgb(78, 78, 78);
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    background-color: var(--grey);
 
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
 }
 
 .restaurant-name-heading {
     font-size: 4rem;
+    padding-top: 1rem;
 }
 
 .header-nav > ul {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    place-items: center;
-    gap: 2rem;
 
     font-size: 1.5rem;
+}
+
+.tab {
+    padding: 1rem 2rem;
+    background-color: var(--grey);
+    cursor: pointer;
+}
+
+.tab-selected {
+    background-color: var(--black);
+    border-radius: 25px 25px 0 0;
 }
 
 .main-img {
