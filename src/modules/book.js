@@ -14,7 +14,7 @@ const createBookingForm = function() {
     let form = document.createElement("form");
     form.classList.add("booking-form");
     form.method = "post";
-    form.action = "#";
+    form.action = "";
 
     form.appendChild(createFormItem("Name", "name", "name", true).formItem);
 
